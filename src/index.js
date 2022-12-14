@@ -49,7 +49,7 @@ function renderCharacters(animal) {
 function getCharacters() {
     fetch('http://localhost:3000/characters/')
     .then(response => response.json())
-    .then(animals.forEach(renderCharacters))
+    .then(animals => animals.forEach(animal => renderCharacters(animal)))
 }
 
 
